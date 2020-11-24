@@ -1,14 +1,15 @@
-//function getQuantity() {
-//  let defaultNum = 3;
-//  return defaultNum;
-//}
-
-function getDogImages(quantity) {
+function getDogImages() {
   console.log('Fetching your dog images');
-   fetch (`https://dog.ceo/api/breeds/image/random/3`)
+  let quantity = getQuantity();
+   fetch (`https://dog.ceo/api/breeds/image/random/${quantity}`)
    .then(response => response.json())
    .then(responseJson => displayResults(responseJson))
    .catch(error => alert('Something went wrong.Try again later.'))
+}
+
+function getQuantity() {
+  let enteredNum = $('#dog-quantity').val();
+  return enteredNum;
 }
 
 // displaysResults to the DOM
