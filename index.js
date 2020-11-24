@@ -1,7 +1,7 @@
-function getQuantity() {
-  let defaultNum = 3;
-  return defaultNum;
-}
+//function getQuantity() {
+//  let defaultNum = 3;
+//  return defaultNum;
+//}
 
 function getDogImages(quantity) {
   console.log('Fetching your dog images');
