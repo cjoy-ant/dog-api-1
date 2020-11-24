@@ -14,14 +14,14 @@ function getDogImages(quantity) {
 // displaysResults to the DOM
 function displayResults(responseJson) {
   console.log(responseJson);
-  let index = getQuantity();
-  let dogHtml = "";
-  for (let i=0; i < index; i++) {
-    dogHtml+=`<br><img src="${responseJson.message[i]}" class="results-img">`;
-  }
-  $('section h2').replaceWith(`<h2>You got ${getQuantity()} dogs!</h2>`);
-  $('div.response-images').html(dogHtml);
-  $('.results').removeClass('hidden');
+//  let index = getQuantity();
+//  let dogHtml = "";
+//  for (let i=0; i < index; i++) {
+//    dogHtml+=`<br><img src="${responseJson.message[i]}" class="results-img">`;
+//  }
+//  $('section h2').replaceWith(`<h2>You got ${getQuantity()} dogs!</h2>`);
+//  $('div.response-images').html(dogHtml);
+//  $('.results').removeClass('hidden');
 }
 
 // listens for user to submit form
