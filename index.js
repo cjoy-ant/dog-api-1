@@ -1,5 +1,7 @@
-// default is set to 3 in html
-let quantity = 3;
+function getQuantity() {
+  let defaultNum = 3;
+  return defaultNum;
+}
 
 function getDogImages(quantity) {
   console.log('Fetching your dog images');
@@ -12,11 +14,12 @@ function getDogImages(quantity) {
 // displaysResults to the DOM
 function displayResults(responseJson) {
   console.log(responseJson);
+  let index = getQuantity();
   let dogHtml = "";
-  for (let i=0; i < quantity; i++) {
+  for (let i=0; i < index; i++) {
     dogHtml+=`<br><img src="${responseJson.message[i]}" class="results-img">`;
   }
-  $('section h2').replaceWith(`<h2>You got ${quantity} dogs!</h2>`);
+  $('section h2').replaceWith(`<h2>You got ${getQuantity()} dogs!</h2>`);
   $('div.response-images').html(dogHtml);
   $('.results').removeClass('hidden');
 }
@@ -25,7 +28,7 @@ function displayResults(responseJson) {
 function watchForm() {
   $('form').submit(event => {
     event.preventDefault();
-    getDogImages(quantity);
+    getDogImages();
   });
 }
 
